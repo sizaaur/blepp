@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A little letter for you</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Quicksand:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<!--
+=====================================================================
+  WHAT TO EDIT  (search for the "EDIT:" comments below)
+  1. Letter title ........ EDIT: TITLE
+  2. Recipient name ...... EDIT: NAME
+  3. Date ................ EDIT: DATE
+  4. Main message ........ EDIT: MESSAGE   (the big box in the letter)
+  5. Sender name ......... EDIT: SENDER    (letter + closing)
+  6. Photo filenames ..... EDIT: PHOTO     (put your files in an "images" folder)
+  7. Photo captions ...... EDIT: CAPTION
+  Colors: open style.css and change the variables at the very top.
+=====================================================================
+-->
+
+<body>
+
+<!-- ============ NAVIGATION (little paper tabs) ============ -->
+<nav class="tabs" aria-label="Sections">
+  <a href="#letter">Letter</a>
+  <a href="#memories">Memories</a>
+  <a href="#photos">Photos</a>
+</nav>
+
+<!-- floating decorations (purely decorative) -->
+<div class="floaters" aria-hidden="true">
+  <span style="left:6%;  top:14%; animation-delay:0s">♡</span>
+  <span style="left:90%; top:22%; animation-delay:1s">✦</span>
+  <span style="left:4%;  top:58%; animation-delay:2s">❀</span>
+  <span style="left:93%; top:70%; animation-delay:.5s">♡</span>
+  <span style="left:12%; top:88%; animation-delay:1.5s">✦</span>
+</div>
+
+<!-- ============ 1. HERO / LETTER COVER ============ -->
+<header class="hero" id="top">
+  <div class="paper cover pop-in" id="cover">
+    <span class="tape tape-l"></span><span class="tape tape-r"></span>
+    <span class="sticker pop" style="top:-22px; left:50%; margin-left:-22px; --d:.5s">❀</span>
+
+    <!-- EDIT: TITLE -->
+    <h1>[LETTER TITLE]</h1>
+    <p class="sub">a little letter for you</p>
+    <!-- EDIT: DATE -->
+    <p class="date">[DATE]</p>
+
+    <p class="doodle" aria-hidden="true">✦ &nbsp;♡&nbsp; ✦</p>
+    <button class="btn" id="openBtn">Open Letter</button>
+    <span class="sticker pop sm" style="bottom:-16px; right:24px; --d:.8s">✿</span>
+  </div>
+</header>
+
+<!-- ============ 2. PHOTO COLLAGE ============ -->
+<section class="section" id="photos">
+  <h2 class="hand reveal">a few pictures</h2>
+  <div class="collage">
+
+    <!-- EDIT: PHOTO (src) and CAPTION. Each <figure> is one printed photo. -->
+    <figure class="photo p1 slide" style="--r:-4deg; --d:.3s">
+      <span class="washi"></span>
+      <img src="images/photo1.jpg" alt="Photo 1" data-ph="PHOTO 1">
+      <figcaption>[caption]</figcaption>
+    </figure>
+
+    <figure class="photo p2 slide" style="--r:3deg; --d:.4s">
+      <span class="washi purple"></span>
+      <img src="images/photo2.jpg" alt="Photo 2" data-ph="PHOTO 2">
+      <figcaption>[memory]</figcaption>
+    </figure>
+
+    <figure class="photo p3 slide" style="--r:-2deg; --d:.5s">
+      <span class="clip" aria-hidden="true"></span>
+      <img src="images/photo3.jpg" alt="Photo 3" data-ph="PHOTO 3">
+      <figcaption>[date]</figcaption>
+    </figure>
+
+    <figure class="photo p4 slide" style="--r:5deg; --d:.6s">
+      <span class="washi"></span>
+      <img src="images/photo4.jpg" alt="Photo 4" data-ph="PHOTO 4">
+      <figcaption>[caption]</figcaption>
+    </figure>
+
+    <figure class="photo p5 slide" style="--r:-3deg; --d:.7s">
+      <span class="washi purple"></span>
+      <img src="images/photo5.jpg" alt="Photo 5" data-ph="PHOTO 5">
+      <figcaption>[memory]</figcaption>
+    </figure>
+
+    <span class="sticker pop" style="top:38%; left:44%; --d:1s" aria-hidden="true">✦</span>
+    <span class="sticker pop sm" style="bottom:6%; left:46%; --d:1.2s" aria-hidden="true">🍃</span>
+  </div>
+</section>
+
+<!-- ============ 3. THE LETTER ============ -->
+<section class="section" id="letter">
+  <article class="notebook reveal">
+    <span class="tape tape-l"></span>
+    <span class="clip" style="right:40px; top:-14px" aria-hidden="true"></span>
+
+    <!-- EDIT: NAME -->
+    <p class="greeting">Dear [NAME],</p>
+
+    <!-- EDIT: MESSAGE  ⬇⬇⬇  Replace everything in this box. Use a new <p> for each paragraph. -->
+    <div class="message">
+      <p>[WRITE YOUR MESSAGE HERE]</p>
+      <p>This is where I can write my personal message.
+         The text should be easy to replace directly in the HTML.</p>
+    </div>
+    <!-- ⬆⬆⬆  END OF MESSAGE  -->
+
+    <p class="signoff">With love,<br>
+      <!-- EDIT: SENDER -->
+      <strong>[YOUR NAME]</strong></p>
+  </article>
+</section>
+
+<!-- ============ 5. FINAL MEMORIES ============ -->
+<section class="section" id="memories">
+  <h2 class="hand reveal">Some little memories</h2>
+  <div class="memories">
+
+    <!-- EDIT: PHOTO and CAPTION -->
+    <figure class="photo reveal" style="--r:-3deg">
+      <span class="washi"></span>
+      <img src="images/memory1.jpg" alt="Memory 1" data-ph="MEMORY 1">
+      <figcaption>One of my favorite memories.</figcaption>
+    </figure>
+    <figure class="photo reveal" style="--r:2deg">
+      <span class="washi purple"></span>
+      <img src="images/memory2.jpg" alt="Memory 2" data-ph="MEMORY 2">
+      <figcaption>Something I'll always remember.</figcaption>
+    </figure>
+    <figure class="photo reveal" style="--r:-1deg">
+      <span class="clip" aria-hidden="true"></span>
+      <img src="images/memory3.jpg" alt="Memory 3" data-ph="MEMORY 3">
+      <figcaption>[caption]</figcaption>
+    </figure>
+  </div>
+
+  <blockquote class="quote reveal">“Some moments deserve to be kept.”</blockquote>
+</section>
+
+<!-- ============ 6. CLOSING ============ -->
+<footer class="closing reveal">
+  <p class="hand big">Thank you for being part of my story.</p>
+  <!-- EDIT: SENDER -->
+  <p class="hand">♡ [YOUR NAME]</p>
+  <span class="beat" aria-hidden="true">♡</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
